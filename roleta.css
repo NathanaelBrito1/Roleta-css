@@ -1,0 +1,298 @@
+body {
+    background: linear-gradient(to bottom, #e6e6e6, #ffffff);
+    background-image: url('https://img.freepik.com/fotos-gratis/resumo-liso-fundo-laranja-layout-designstudioroom-modelo-de-web-relatorio-comercial-com-liso-c_1258-54783.jpg?w=740&t=st=1699281544~exp=1699282144~hmac=975eb734e1e159bfbf22e40f564e5886fb19fa9961fbc03ff353148ff76a9fe0'); /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho real da sua imagem */
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.folha {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    padding: 500px;
+    border-radius: 20px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra à caixa */
+}
+
+.roleta {
+    border: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.8s ease-out;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra à roleta */
+}
+
+.rotacionando {
+    animation: girar 2s linear infinite;
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+path {
+    fill: transparent;
+}
+
+.seta {
+    position: absolute;
+    left: 48.5%;
+    border-bottom: 0px solid transparent;
+    border-left: 20px solid transparent;    
+    border-right: 20px solid transparent;
+    border-top: 40px solid #fcfcfc;
+    width: 0;
+    height: 0;
+    z-index: 999;
+}
+
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8 {
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.box1 {
+    border-top: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 150px solid #efefef;
+    border-left: 150px solid #efefef;
+}
+
+.box5 {
+    border-top: 150px solid #f2971b;
+    border-right: 150px solid #f2971b;
+    border-bottom: 150px solid transparent;
+    border-left: 150px solid transparent;
+}
+
+.box2 {
+    border-top: 150px solid #efefef;
+    border-right: 150px solid transparent;
+    border-bottom: 150px solid transparent;
+    border-left: 150px solid #efefef;
+    left: 50%;
+}
+
+.box6 {
+    border-top: 150px solid transparent;
+    border-right: 150px solid #f2971b;
+    border-bottom: 150px solid #f2971b;
+    border-left: 150px solid transparent;
+    left: 50%
+}
+
+.box4 {
+    border-top: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 150px solid #f2971b;
+    border-left: 150px solid #f2971b;
+    top: 50%;
+    left: 50%;
+}
+
+.box8 {
+    border-top: 150px solid #efefef;
+    border-right: 150px solid #efefef;
+    border-bottom: 150px solid transparent;
+    border-left: 150px solid transparent;
+    top: 50%;
+    left: 50%;
+}
+
+.box3 {
+    border-top: 150px solid #f2971b;
+    border-right: 150px solid transparent;
+    border-bottom: 150px solid transparent;
+    border-left: 150px solid #f2971b;
+    top: 50%;
+}
+
+.box7 {
+    border-top: 150px solid transparent;
+    border-right: 150px solid #efefef;
+    border-bottom: 150px solid #efefef;
+    border-left: 150px solid transparent;
+    top: 50%;
+}
+
+
+
+@keyframes roleta {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes popupAnimation {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes animacaoSeta {
+    0% { transform: rotate(0deg)}
+    25% { transform: rotate(-15deg)}
+    75% { transform: rotate(15deg)}
+    100% { transform: rotate(0deg)}
+}
+
+.premio {
+    position: absolute;
+    z-index: 999;
+    font-size: 27px;
+    font-weight: bold;
+    color: white;
+}
+
+.premio1 {
+    top: 35%;
+    left: 8%;
+    transform: rotate(25deg);
+}
+
+.premio2 {
+    top: 15%;
+    left: 30%;
+    transform: rotate(55deg);
+}
+
+.premio3 {
+    top: 15%;
+    left: 55%;
+    transform: rotate(115deg);
+}
+
+.premio4 {
+    top: 33%;
+    right: 10%;
+    transform: rotate(150deg);
+}
+
+.premio5 {
+    top: 60%;
+    right: 10%;
+    transform: rotate(200deg);
+}
+
+.premio6 {
+    top: 80%;
+    right: 30%;
+    transform: rotate(250deg);
+}
+
+.premio7 {
+    top: 80%;
+    left: 30%;
+    transform: rotate(306deg);
+}
+
+.premio8 {
+    top: 60%;
+    left: 10%;
+    transform: rotate(333deg);
+}
+
+.btnRoleta {
+    position: absolute;
+    color: white;
+    background-color: #efefef;
+    border: 15px solid #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    top: 45%;
+    left: 45%;
+    font-size: 35px;
+    border-radius: 50%;
+    height: 42px;
+    width: 42px;
+    text-align: center; 
+}
+
+.play {
+    z-index: 999;
+}
+
+.stop {
+    /*    visibility: hidden;*/
+    animation-play-state: paused;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #d3d3d3; /* Cor mais escura para o popup */
+    margin: 200px auto;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+    color: #000000;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Adiciona uma sombra ao popup */
+}
+.popup-content {
+    transform: scale(0.7);
+    animation: popupAnimation 0.5s ease-in-out forwards;
+}
+
+.popup-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.popup-description {
+    margin-bottom: 20px;
+}
+
+.btn-popup {
+    padding: 10px 20px;
+    background-color: #f2971b;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.premio1, .premio2, .premio3, .premio4, .premio5, .premio6, .premio7, .premio8 {
+    color: #000000;
+}
